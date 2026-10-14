@@ -11,3 +11,13 @@
 #education .organization-logo[alt="HKUST"]{width:62px;height:96px;margin-top:0;object-fit:contain}
 
 .portrait{aspect-ratio:1279/1288;overflow:hidden}.portrait img{display:block;width:100%;height:auto;object-fit:contain}
+
+/* Portrait surprise: stable layout, mouse hover and keyboard focus. */
+.portrait-swap{position:relative}
+.portrait-swap .portrait-photo{transition:opacity .18s ease}
+.portrait-swap .portrait-surprise{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;pointer-events:none;transition:opacity .18s ease}
+.portrait-swap:focus-visible{outline:3px solid #72b4de;outline-offset:5px}
+.portrait-swap:focus-visible .portrait-photo{opacity:0}
+.portrait-swap:focus-visible .portrait-surprise{opacity:1}
+@media(hover:hover){.portrait-swap:hover .portrait-photo{opacity:0}.portrait-swap:hover .portrait-surprise{opacity:1}}
+@media(prefers-reduced-motion:reduce){.portrait-swap .portrait-photo,.portrait-swap .portrait-surprise{transition:none}}
