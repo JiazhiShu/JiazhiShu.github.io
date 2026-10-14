@@ -21,3 +21,8 @@
 .portrait-swap:focus-visible .portrait-surprise{opacity:1}
 @media(hover:hover){.portrait-swap:hover .portrait-photo{opacity:0}.portrait-swap:hover .portrait-surprise{opacity:1}}
 @media(prefers-reduced-motion:reduce){.portrait-swap .portrait-photo,.portrait-swap .portrait-surprise{transition:none}}
+
+/* Keep the hover layer out of document flow on every screen size. */
+.portrait-swap{isolation:isolate}
+.portrait-swap .portrait-surprise{display:block;z-index:1}
+@media(max-width:540px){.intro .portrait-swap{position:absolute}}
