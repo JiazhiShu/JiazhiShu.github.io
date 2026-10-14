@@ -9,3 +9,5 @@
 .intro{padding-top:52px}.intro .bio:first-of-type{margin-top:24px}#education .organization-logo[alt="HKUST"]{width:65px;height:auto;margin-top:8px}@media(max-width:540px){.intro{padding-top:35px}.intro .portrait{top:30px}}
 
 #education .organization-logo[alt="HKUST"]{width:62px;height:96px;margin-top:0;object-fit:contain}
+
+.portrait{aspect-ratio:1279/1288;overflow:hidden}.portrait img{display:block;width:100%;height:auto;object-fit:contain}
