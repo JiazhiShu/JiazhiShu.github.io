@@ -12,3 +12,11 @@
 
 .portrait{aspect-ratio:1279/1288;overflow:hidden}.portrait img{display:block;width:100%;height:auto;object-fit:contain}
 
+
+/* Centered paper surface, with a continuous edge around all content. */
+body{background:#f3f4f5;padding:28px 24px}
+.page-sheet{max-width:1060px;margin:0 auto;background:#fff;border:1px solid #e0e3e6;box-shadow:0 2px 14px rgba(24,38,50,.13);padding:12px 28px 0}
+.page-sheet main,.page-sheet footer{max-width:100%;padding-left:28px;padding-right:28px}
+@media(max-width:760px){body{padding:16px 12px}.page-sheet{padding:6px 12px 0}.page-sheet main,.page-sheet footer{padding-left:20px;padding-right:20px}}
+@media(max-width:540px){body{padding:0}.page-sheet{padding:0;border:0;box-shadow:none}.page-sheet main,.page-sheet footer{padding-left:24px;padding-right:24px}}
+@media print{body{background:#fff;padding:0}.page-sheet{max-width:none;margin:0;padding:0;border:0;box-shadow:none}.page-sheet main,.page-sheet footer{padding-left:0;padding-right:0}}
